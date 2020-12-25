@@ -401,11 +401,11 @@ body ul {
 }
 
 .post__header {
-  margin: -18px -20px;
+  margin: 0 0 1rem;
   margin-bottom: 1rem;
 }
-.post__header--video {
-  margin: 0 0 1rem;
+.post__header--preview {
+  margin: -18px -20px -7px -20px;
 }
 
 .post_preview {

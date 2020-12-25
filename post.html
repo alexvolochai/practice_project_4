@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+
+        <header class="header">
+            <div class="header__left">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link has-subnav" href="#">Статьи</a>
+                            <ul class="subnav">
+                                <li>
+                                    <a href="#">Создание сайтов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Интернет маркетинг</a>
+                                </li>
+                                <li>
+                                    <a href="#">Продвижение видео</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Обо мне</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Реклама</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> 
+            <div class="header__right">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Профиль</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="search" action="/" method="POST">
+                <input class="search__input" type="text" placeholder="Поиск по блогу"></form>
+            </div>
+        </header>
+        
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <img src="/img/sidebar-header.jpg" alt="">
+
+            </div>
+            <div class="sidebar__content">
+                <div class="profile">
+                    <img src="https://placehold.it/100" alt="" class="profile__avatar">
+                    <div class="profile__name">Иван Иванов</div>
+                    <div class="profile__prof">блог front-end разработчика</div>
+
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="#" class="social_link" target="_blank">
+                                <img src="/img/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social_link" target="_blank">
+                                <img src="/img/vk.svg" alt="vk">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social_link" target="_blank">
+                                <img src="/img/pinterest.svg" alt="pinterest">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="profile__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias repudiandae corporis totam nesciunt dignissimos voluptatibus odio sed labore nam, atque asperiores aliquam et mollitia. Vitae, qui quasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__footer">
+                <a class="btn btn--red" href="#">Мои работы</a>
+                <button class="btn btn--blue" type="button">Написать мне</button>
+            </div>
+
+        </aside>
+        
+        <main class="main">
+            <div class="container">
+                <div class="post">
+                    <div class="post__actions">
+                        <a href="index.html">вернуться назад</a>
+                        <a href="#">поделиться<img class="post__actions-icon" src="/img/share.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="post__header">
+                        <h2 class="post__title post__title--mb0">
+                            <a href="#">Как я сходил на FrontEnd Conf 2021</a>
+                        </h2>
+
+                        <ul class="post__data">
+                            <li class="post__data-item">
+                                <time datetime="2020-06-21 19:11">21.06.2020</time>
+                            </li>
+                            <li class="post__data-item">
+                                <a href="#">конференции</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="post__content">
+                        <div class="post__text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sed aliquid praesentium. Possimus quod molestiae minus necessitatibus laborum, pariatur voluptates, delectus odit eaque, quia ratione natus! Assumenda, dolorum placeat. Id.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel praesentium nemo soluta doloribus, accusamus aspernatur vitae consectetur magni, saepe eaque dolore ab aliquam ut dolores fuga. Nulla doloremque neque expedita.</p>
+                        <p>
+                            <img src="/img/image.jpg" alt="">
+                        </p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non magnam ipsum dolor debitis, fuga, error soluta commodi aliquid velit nulla hic a perferendis cumque, sed adipisci reiciendis dolorum fugit ratione?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in similique nihil nesciunt numquam nam odit molestias temporibus obcaecati accusantium, totam architecto, pariatur quasi voluptate error, laborum sapiente quo unde?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus in expedita cum perspiciatis aut fugiat, et dolor doloremque possimus a. Tempora tenetur reprehenderit quam molestiae aperiam nobis incidunt nemo quod?</p>
+                        </div>
+
+                        <div class="related">
+                            <h3 class="post__subtitle">Интересно почитать</h3>
+
+                            <ul class="related__list">
+                                <li class="related__list-item">
+                                    <h4 class="related__list-title">
+                                        <a href="#">Как я сходил на FrontEnd Conf 2021</a>
+                                    </h4>
+                                    <time class="related__list-date" datetime="2020-06-21 19:21">21.06.2020</time>
+                                </li>
+                                <li class="related__list-item">
+                                    <h4 class="related__list-title">
+                                        <a href="#">Как я сходил на FrontEnd Conf 2021</a>
+                                    </h4>
+                                    <time class="related__list-date" datetime="2020-06-21 19:21">21.06.2020</time>
+                                </li>
+                                <li class="related__list-item">
+                                    <h4 class="related__list-title">
+                                        <a href="#">Как я сходил на FrontEnd Conf 2021</a>
+                                    </h4>
+                                    <time class="related__list-date" datetime="2020-06-21 19:21">21.06.2020</time>
+                                </li>
+                                <li class="related__list-item">
+                                    <h4 class="related__list-title">
+                                        <a href="#">Как я сходил на FrontEnd Conf 2021</a>
+                                    </h4>
+                                    <time class="related__list-date" datetime="2020-06-21 19:21">21.06.2020</time>
+                                </li>
+ 
+                            </ul>
+                        </div>
+
+                        
+                            <h3 class="post__subtitle">Обсуждение</h3>
+
+                            <form class="form" action="/" method="POST">
+                                <div class="form__group">
+                                <textarea class="form__control form__control--textarea" name="comment-text" placeholder="Текст комментария"></textarea>
+                                <span class="form__line"></span>
+                                </div>
+                                <button class="btn btn--blue" type="submit">Отправить</button>
+                            </form>
+
+                            <ul class="comments">
+                                <li class="comments__item">
+                                    <div class="comments__header">
+                                        <img class="comments__avatar" src="https://placehold.it/30" alt="">
+                                        
+                                        <div class="comments__author">
+                                            <div class="comments__name">Иван Иванов</div>
+                                            <time class="comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                                        </div>
+                                    </div>
+
+                                    <div class="comments__text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus dolorum fugit porro accusantium culpa recusandae inventore, non unde, deleniti, praesentium cumque tenetur dolores nemo pariatur aspernatur itaque est ducimus.
+                                    </div>
+                                    <button class="comments__reply" type="button">ответить</button>
+
+                                    <ul class="comments">
+                                        <li class="comments__item">
+                                            <div class="comments__header">
+                                                <img class="comments__avatar" src="https://placehold.it/30" alt="">
+                                                
+                                                <div class="comments__author">
+                                                    <div class="comments__name">Иван Иванов</div>
+                                                    <time class="comments__pubdate" datetime="2020-12-21 19:21">1 неделю назад</time>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="comments__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus dolorum fugit porro accusantium culpa recusandae inventore, non unde, deleniti, praesentium cumque tenetur dolores nemo pariatur aspernatur itaque est ducimus.
+                                            </div>
+                                            <button class="comments__reply" type="button">ответить</button>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

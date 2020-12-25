@@ -426,11 +426,11 @@ body {
 }
 
 .post__header {
-    margin: -18px -20px;
+    margin: 0 0 1rem;
     margin-bottom: 1rem;
 
-    &--video {
-        margin: 0 0 1rem;
+    &--preview {
+        margin: -18px -20px -7px -20px;
     }
 }
 
