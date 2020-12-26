@@ -14,10 +14,6 @@ body ul {
 
 .page {
   overflow: hidden;
-  min-height: 100hv;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 *,
