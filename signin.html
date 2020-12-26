@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="profile.css">
-    <title>Profile</title>
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign In</title>
 </head>
 <body>
     <div class="page">
@@ -105,44 +106,36 @@
         <main class="main">
             <div class="container">
                 <div class="page">
-                    <h1 class="page__title">Профиль</h1>
+                    <h1 class="page__title page__title--centre">Вход</h1>
 
-                    <form action="/" method="POST" class="form">
-                        <div class="cabinet">
-                            <div class="cabinet__form">
-                                <div class="form__group form__group--md">
-                                    <input type="text" class="form__control" placeholder="Ваше имя" value="Иван Иванов">
-                                    <span class="form__line"></span>
-                                </div>
-        
-                                <div class="form__group form__group--md">
-                                    <input type="email" class="form__control" placeholder="Ваш email" value="ivanov@gmail.com">
-                                    <span class="form__line"></span>
-                                </div>
-        
-                                <div class="form__group form__group--md">
-                                    <input type="password" class="form__control" placeholder="Новый пароль">
-                                    <span class="form__line"></span>
-                                </div>
-        
-                                <div class="form__group form__group--md">
-                                    <input type="password" class="form__control" placeholder="Подтвердите пароль">
-                                    <span class="form__line"></span>
-                                </div>
-                            </div>
+                    <form action="/" class="form form--auth" method="POST">
 
-                            <div class="cabinet__avatar">
-                                <img src="https://placehold.it/100" alt="">
-
-                                <label class="cabinet__file">
-                                    <input type="file">
-                                    выбрать аватар
-                                </label>
-                            </div>
+                        <div class="form__group form__group--md">
+                            <input type="email" class="form__control" placeholder="Ваш email">
+                            <span class="form__line"></span>
                         </div>
-                        
-                        <button type="submit" class="btn btn--blue btn--rounded btn--sm">Сохранить</button>
+
+                        <div class="form__group form__group--md">
+                            <input type="password" class="form__control" placeholder="Пароль">
+                            <span class="form__line"></span>
+                        </div>
+
+                        <div class="form__footer form__footer--center">
+                            <div class="form__group form__group--md">
+                                <button type="submit" class="btn btn--blue btn--rounded btn--sm">Войти</button>
+                            </div>
+
+                            <ul class="form__footer-list">
+                                <li>
+                                    <a href="signup.html">регистрация</a>
+                                </li>
+                                <li>
+                                    <a href="reset.html">восстановить</a>
+                                </li>
+                            </ul>
+                        </div>
                     </form>
+
                 </div>
             </div>
         </main>

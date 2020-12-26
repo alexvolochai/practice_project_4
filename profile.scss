@@ -2,4 +2,45 @@
 
 .form__control {
     padding: .75rem 0 .75rem 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form__group--md {
+    margin-bottom: 2.2rem;
+}
+
+.cabinet {
+    display: flex;
+}
+
+.cabinet__form {
+    width: 34rem;
+}
+
+.cabinet__avatar {
+    flex-grow: 1;
+    padding-left: 11rem;
+
+    img {
+        display: block;
+        margin-bottom: 12px;
+    }
+}
+
+.cabinet__file {
+    color: $blue;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
