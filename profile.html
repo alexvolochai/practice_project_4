@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
     <link rel="stylesheet" href="works.css">
     <link rel="stylesheet" href="post.css">
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <title>Works</title>
+    <link rel="stylesheet" href="profile.css">
+    <title>Profile</title>
 </head>
 <body>
     <div class="page">
@@ -104,60 +105,14 @@
         <main class="main">
             <div class="container">
                 <div class="page">
-                    <h1 class="page__title">Мои работы</h1>
+                    <h1 class="page__title">Профиль</h1>
 
-                    <article class="work">
-                        <div class="work__preview">
-                            <img src="/img/work-1.jpg" alt="">
+                    <form action="/" method="POST" class="form">
+                        <div class="form__group">
+                            <input type="text" class="form__control" placeholder="Ваше имя" value="Иван Иванов">
+                            <span class="form__line"></span>
                         </div>
-
-                        <div class="work__content">
-                            <h2 class="work__title">
-                                <a href="#" target="_blank">altermomo.com</a>
-                            </h2>
-
-                            <div class="work__description">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, porro reprehenderit eos quos corporis eveniet corrupti dolorem impedit nesciunt odio, sequi tenetur quisquam dolore culpa molestiae atque illo natus non?Lorem ipsum dolor sit amet consectetur adipisicing elit. . Asperiores debitis blanditiis repellendus animi culpa maiores odio deserunt, odit quae ex tempora ullam.
-                                </p>
-                            </div>
-
-                            <ul class="tags">
-                                <li class="tags__item">дизайн</li>
-                                <li class="tags__item">создание сайтов</li>
-                                <li class="tags__item">SMM</li>
-                            </ul>
-                            <div class="work__footer">
-                            <a class="btn btn--blue btn--rounded btn--sm" href="#">Перейти на сайт<a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="work">
-                        <div class="work__preview">
-                            <img src="/img/work-2.jpg" alt="">
-                        </div>
-
-                        <div class="work__content">
-                            <h2 class="work__title">
-                                <a href="#" target="_blank">codedoco.com</a>
-                            </h2>
-
-                            <div class="work__description">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, porro reprehenderit eos quos corporis eveniet corrupti dolorem impedit nesciunt odio, sequi tenetur quisquam dolore.
-                                </p>
-                            </div>
-
-                            <ul class="tags">
-                                <li class="tags__item">дизайн</li>
-                                <li class="tags__item">создание сайтов</li>
-                                <li class="tags__item">SMM</li>
-                                <li class="tags__item">дизайн</li>
-                                <li class="tags__item">SMM</li>
-                            </ul>
-                            <div class="work__footer">
-                            <a class="btn btn--blue btn--rounded btn--sm" href="#">Перейти на сайт<a>
-                            </div>
-                        </div>
-                    </article>
+                    </form>
                 </div>
             </div>
         </main>
