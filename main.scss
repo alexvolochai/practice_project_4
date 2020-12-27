@@ -570,4 +570,73 @@ body {
 }
 /*----------------embed end---------------------*/
 
+/*----------------modal----------------------*/
+
+.modal  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    z-index: $z-index-modal;
+    background-color: rgba(black, .8);
+    opacity: 0;
+    visibility: hidden;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal__content {
+    max-width: 500px;
+    padding: 80px 80px 80px 80px;
+    background-color: $primary;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+
+    &--contact {
+        margin: 80px 80px 25px 80px;
+    }
+}
+
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+    img {
+        opacity: .5;
+        transition: transform .2s linear, opacity .2s linear;
+        &:hover {
+            transform: rotate(90deg);
+            opacity: 1;
+        }
+    }
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    color: #b2b2b2;
+    font-size: 12px;
+
+    li {
+        margin: 0 .5rem;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+
+
 

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="works.css">
     <link rel="stylesheet" href="post.css">
     <link rel="stylesheet" href="search.css">
@@ -101,7 +102,7 @@
             </div>
             <div class="sidebar__footer">
                 <a class="btn btn--red" href="works.html">Мои работы</a>
-                <button class="btn btn--blue" type="button">Написать мне</button>
+                <a class="btn btn--blue" href="#contact-modal">Написать мне</a>
             </div>
 
         </aside>
@@ -143,5 +144,50 @@
             </div>
         </main>
     </div>
+
+            <!-- --------- modal ------------------------- -->
+
+            <div id="contact-modal" class="modal">
+                <div class="modal__content modal__content--contact">
+                    <a class="modal__close" href="#">
+                        <img src="/img/close.svg" alt="">
+                    </a>
+        
+                    <form action="/" class="form" method="POST">
+        
+                        <div class="form__group form__group--md">
+                            <input type="text" class="form__control" placeholder="Ваше имя">
+                            <span class="form__line"></span>
+                        </div>
+        
+                        <div class="form__group form__group--md">
+                            <input type="email" class="form__control" placeholder="Ваш email">
+                            <span class="form__line"></span>
+                        </div>
+        
+                        <div class="form__group form__group--md">
+                            <textarea class="form__control form__control--textarea" placeholder="Текст сообщения"></textarea>
+                            <span class="form__line"></span>
+                        </div>
+        
+                        <div class="form__footer">
+                            <div class="form__group form__group--md">
+                                <button type="submit" class="btn btn--blue btn--rounded btn--sm">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+        
+                    <ul class="modal__footer">
+                        <li>
+                            e-mail:
+                            <a href="mailto:info@mywebsite.ua">info@mywebsite.ua</a>
+                        </li>
+                        <li>
+                            tel:
+                            <a href="tel:+12345678912">+123-456-789-12</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 </body>
 </html>

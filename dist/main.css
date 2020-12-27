@@ -531,3 +531,63 @@ body ul {
 }
 
 /*----------------embed end---------------------*/
+/*----------------modal----------------------*/
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__content {
+  max-width: 500px;
+  padding: 80px 80px 80px 80px;
+  background-color: #202020;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+}
+.modal__content--contact {
+  margin: 80px 80px 25px 80px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal__close img {
+  opacity: .5;
+  transition: transform .2s linear, opacity .2s linear;
+}
+.modal__close img:hover {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  color: #b2b2b2;
+  font-size: 12px;
+}
+.modal__footer li {
+  margin: 0 .5rem;
+}
+.modal__footer a {
+  color: inherit;
+  text-decoration: underline;
+}
