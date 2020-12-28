@@ -33,6 +33,11 @@ body ul {
   right: 0;
   z-index: 1000;
 }
+@media (max-width: 991px) {
+  .header {
+    width: 100%;
+  }
+}
 
 .header__left {
   width: 60%;
@@ -146,6 +151,11 @@ body ul {
   z-index: 1000;
   box-shadow: 5px 0 15px rgba(5, 5, 5, 0.1);
 }
+@media (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+}
 
 .sidebar__header {
   height: 180px;
@@ -247,6 +257,11 @@ body ul {
 /* ----------------------- main ------------------- */
 .main {
   padding: 8rem 0 8rem 300px;
+}
+@media (max-width: 991px) {
+  .main {
+    padding-left: 0;
+  }
 }
 
 .container {

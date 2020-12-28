@@ -1,4 +1,5 @@
 @import "vars";
+@import "_mixins";
 
 body {
     background-color: #181818;
@@ -263,6 +264,10 @@ body {
 /* ----------------------- main ------------------- */
 .main {
     padding: 8rem 0 8rem $sidebar-width;
+
+    @include brakepoint($tablet-bp) {
+        padding-left: 0;
+    }
 }
 
 .container {
@@ -636,7 +641,3 @@ body {
         text-decoration: underline;
     }
 }
-
-
-
-
