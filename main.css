@@ -46,6 +46,11 @@ body ul {
 .header__left {
   width: 60%;
 }
+@media (max-width: 991px) {
+  .header__left {
+    width: 40%;
+  }
+}
 
 .header__right {
   width: 40%;
@@ -56,8 +61,13 @@ body ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+@media (max-width: 991px) {
+  .header__right {
+    width: 60%;
+  }
+}
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   .nav {
     display: none;
   }
@@ -162,6 +172,68 @@ body ul {
   outline: none;
 }
 
+/*-----------------burger------------------*/
+.burger {
+  width: 2rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  color: transparent;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.burger:focus {
+  outline: none;
+}
+.burger::before, .burger::after,
+.burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+}
+.burger::before, .burger::after {
+  content: "";
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+}
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+.burger span {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+.show-sidebar .burger span {
+  opacity: 0;
+}
+.show-sidebar .burger::before, .show-sidebar .burger::after {
+  top: 50%;
+}
+.show-sidebar .burger::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.show-sidebar .burger::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 /* -------------- aside ----------------------- */
 .sidebar {
   width: 300px;
@@ -176,12 +248,21 @@ body ul {
 }
 @media (max-width: 991px) {
   .sidebar {
-    display: none;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+    transition: transform .3s linear, -webkit-transform .3s linear;
+  }
+  .show-sidebar .sidebar {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 .sidebar__header {
-  height: 180px;
+  height: 18rem;
   background-color: #121212;
 }
 .sidebar__header img {
@@ -191,22 +272,32 @@ body ul {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 991px) {
+  .sidebar__header {
+    height: 10rem;
+  }
+}
 
 .sidebar__content {
   padding: 0 20px;
-  margin-top: -3rem;
 }
 
 .profile__avatar {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   border: 2px solid #fff;
   border-radius: 50%;
   -webkit-box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
           box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
-  margin: 0 auto 18px;
+  margin: -3rem auto 18px;
   position: relative;
+}
+@media (max-width: 991px) {
+  .profile__avatar {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 }
 
 .profile__name {
@@ -304,6 +395,11 @@ body ul {
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0 1.5rem;
+  }
 }
 
 /*------------ stories-------------*/
