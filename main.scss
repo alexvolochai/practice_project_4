@@ -19,6 +19,22 @@ body {
 
 .page {
     overflow: hidden;
+
+    // @include brakepoint($tablet-bp) {
+    //     position: relative;
+
+    //     &::after {
+    //         content: "";
+    //         display: block;
+    //         width: 100%;
+    //         height: 100%;
+
+    //         background-color: rgba(black, .8);
+    //         top: 0;
+    //         left: 0;
+    //         z-index: 100;
+    //     }
+    // }
 }
 
 *,
@@ -63,14 +79,30 @@ body {
 }
 
 .nav {
+
+    &--mobile {
+        display: none;
+        margin: 30px 0;
+    }
+
     @include brakepoint($tablet-bp) {
         display: none;
+
+        &--mobile {
+            display: block;
+            margin: 30px 0;
+        }
+    
     }
 }
 
 .nav__list {
     display: flex;
     margin: 0;
+
+    @include brakepoint($tablet-bp) {
+        flex-direction: column;
+    }
 }
 
 .nav__link {
@@ -99,6 +131,17 @@ body {
             right: 9px;
         }
     }
+
+    @include brakepoint($tablet-bp) {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:hover {
+            background: none;
+        }
+        
+        font-size: 16px;
+    }
 }
 
 .subnav {
@@ -121,6 +164,26 @@ body {
         &:hover {
             background-color: darken($blue, 10%);
         }
+
+        @include brakepoint($tablet-bp) {
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 15px;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+
+    @include brakepoint($tablet-bp) {
+        position: static;
+        width: 100%; 
+
+        background: none;
+        box-shadow: none;
+
+        padding-left: 20px;
     }
 }
 
@@ -133,6 +196,14 @@ body {
         }
         > .subnav {
             display: block;
+        }
+    }
+
+    @include brakepoint($tablet-bp) {
+        &:hover {
+            .nav__link {
+             background-color: none;
+            }
         }
     }
 }
@@ -165,6 +236,7 @@ body {
 /*-----------------burger------------------*/
 
 .burger {
+    display: none;
     width: 2rem;
     height: 1.5rem;
     position: absolute;
@@ -231,6 +303,10 @@ body {
             transform: rotate(-45deg);
         }
     }
+
+    @include brakepoint($tablet-bp) {
+        display: block;
+    }
 }
 
 
@@ -247,6 +323,12 @@ body {
     box-shadow: 5px 0 15px rgba(#050505, .1);
     
     @include brakepoint($tablet-bp) {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 46px);
+        padding-bottom: 20px;
+        top: 46px;
+        overflow: auto;
         transform: translateX(-100%);
         transition: transform .3s linear;
 
@@ -257,7 +339,7 @@ body {
 }
 
 .sidebar__header {
-    height: 18rem;
+    height: 180px;
     background-color: $secondary;
 
     img {
@@ -268,40 +350,73 @@ body {
     }
 
     @include brakepoint($tablet-bp) {
-        height: 10rem;
+        height: 100px;
     }
 }
 
 .sidebar__content {
     padding: 0 20px;
+
+    @include brakepoint($tablet-bp) {
+        flex-grow: 1;
+    }
+}
+
+.profile {
+    margin-top: -50px;
+
+    @include brakepoint($tablet-bp) {
+        margin-top: -1rem;
+        position: relative;
+    }
 }
 
 .profile__avatar {
     display: block;
-    width: 10rem;
-    height: 10rem;
+    width: 100px;
+    height: 100px;
     border: 2px solid $white;
     border-radius: 50%;
     box-shadow: 0 7px 20px rgba(0, 0, 0, .25);
-    margin: -3rem auto 18px;
+    margin: 0 auto 18px;
     position: relative;
 
     @include brakepoint($tablet-bp) {
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 65px;
+        height: 65px;
+        margin-left: 0;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.profile__header {
+    text-align: center;
+
+    @include brakepoint($tablet-bp) {
+        text-align: left;
+        padding-left: 5rem;
+        padding-top: 27px;
+        margin-bottom: 30px;
     }
 }
 
 .profile__name {
     font-size: 18px;
-    text-align: center;
+
+    @include brakepoint($tablet-bp) {
+        font-size: 15px;
+    }
 }
 
 .profile__prof {
     font-size: 14px;
     font-weight: 300;
     color: #d2d2d2;
-    text-align: center;
+
+    @include brakepoint($tablet-bp) {
+        font-size: 12px;
+    }
 }
 
 .social {
@@ -309,6 +424,10 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
+
+    @include brakepoint($tablet-bp) {
+        display: none;
+    }
 }
 
 .social__item {
@@ -322,6 +441,10 @@ body {
     border-bottom: 2px solid #1c1c1c;
     padding: 30px 0;
     margin: 30px 0;
+
+    @include brakepoint($tablet-bp) {
+        display: none;
+    }
 }
 
 .sidebar__footer {
