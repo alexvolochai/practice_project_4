@@ -49,6 +49,12 @@ body ul {
   justify-content: flex-end;
 }
 
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+}
+
 .nav__list {
   display: flex;
   margin: 0;
@@ -352,7 +358,7 @@ body ul {
 
 .add-post__textarea {
   display: block;
-  width: 82%;
+  flex-grow: 1;
   height: 26px;
   font-family: inherit;
   font-size: 15px;
@@ -360,6 +366,7 @@ body ul {
   border: none;
   background: transparent;
   resize: none;
+  overflow: hidden;
 }
 .add-post__textarea:-ms-input-placeholder {
   color: #d2d2d2;
@@ -403,7 +410,8 @@ body ul {
 .add-post__form-actions {
   display: flex;
   justify-content: space-between;
-  width: 18%;
+  width: 110px;
+  flex-shrink: 0;
 }
 
 /*---------------------------post------------------------------*/

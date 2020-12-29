@@ -1,5 +1,5 @@
 @import "vars";
-@import "_mixins";
+@import "mixins";
 
 body {
     background-color: #181818;
@@ -38,6 +38,10 @@ body {
     top: 0;
     right: 0;
     z-index: $z-index-header;
+
+    @include brakepoint($tablet-bp) {
+        width: 100%;
+    }
 }
 
 .header__left {
@@ -48,6 +52,12 @@ body {
     width: 40%;
     display: flex;
     justify-content: flex-end;
+}
+
+.nav {
+    @include brakepoint($mobile-bp) {
+        display: none;
+    }
 }
 
 .nav__list {
@@ -156,6 +166,10 @@ body {
     left: 0;
     z-index: $z-index-sidebar;
     box-shadow: 5px 0 15px rgba(#050505, .1);
+    
+    @include brakepoint($tablet-bp) {
+        display: none;
+    }
 }
 
 .sidebar__header {
@@ -368,7 +382,7 @@ body {
 
 .add-post__textarea {
     display: block;
-    width: 82%;
+    flex-grow: 1;
     height: 26px;
     font-family: inherit;
     font-size: 15px;
@@ -376,6 +390,7 @@ body {
     border: none;
     background: transparent;
     resize: none;
+    overflow: hidden;
 
     &::placeholder {
         color: #d2d2d2;
@@ -417,7 +432,8 @@ body {
 .add-post__form-actions {
     display: flex;
     justify-content: space-between;
-    width: 18%;
+    width: 110px;
+    flex-shrink: 0;
 }
 
 /*---------------------------post------------------------------*/

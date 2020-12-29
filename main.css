@@ -57,6 +57,12 @@ body ul {
           justify-content: flex-end;
 }
 
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,7 +399,9 @@ body ul {
 
 .add-post__textarea {
   display: block;
-  width: 82%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 26px;
   font-family: inherit;
   font-size: 15px;
@@ -401,6 +409,7 @@ body ul {
   border: none;
   background: transparent;
   resize: none;
+  overflow: hidden;
 }
 .add-post__textarea::-webkit-input-placeholder {
   color: #d2d2d2;
@@ -452,7 +461,9 @@ body ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 18%;
+  width: 110px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 /*---------------------------post------------------------------*/
