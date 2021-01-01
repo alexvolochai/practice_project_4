@@ -1,7 +1,7 @@
 @import "vars";
 
 .post__title--mb0 {
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 .post__actions {
@@ -97,11 +97,20 @@
     h4 {
         margin: 0;
     }
+
+    @include brakepoint($mobile-bp) {
+        flex-direction: column;
+    }
 }
 
 .related__list-item {
     margin-bottom: 2rem;
     width: 50%;
+
+    @include brakepoint($mobile-bp) {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
 }
 
 .related__list-title {

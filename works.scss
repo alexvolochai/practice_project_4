@@ -13,6 +13,11 @@
     &--center {
         text-align: center;
     }
+
+    @include brakepoint($mobile-bp) {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .btn--rounded {
@@ -33,6 +38,10 @@
     background-color: $primary;
     border-radius: 5px;
     box-shadow: 0 15px 25px rgba(black, .4);
+
+    @include brakepoint($mobile-bp) {
+        flex-direction: column;
+    }
 }
 
 .work__preview {
@@ -44,6 +53,12 @@
         height: 100%;
         object-fit: cover;
     }
+
+    @include brakepoint($mobile-bp) {
+        width: 100%;
+        height: 20rem;
+        max-width: none;
+    }
 }
 
 .work__content {
@@ -51,6 +66,11 @@
     padding: 25px;
     display: flex;
     flex-direction: column;
+
+    @include brakepoint($mobile-bp) {
+        width: 100%;
+        padding: 15px;
+    }
 }
 
 .work__title {
@@ -68,6 +88,10 @@
     font-size: 16px;
     color: #d2d2d2;
     font-weight: 300;
+
+    @include brakepoint($mobile-bp) {
+        font-size: 14px;
+    }
 }
 
 .tags {
@@ -89,4 +113,8 @@
 .work__footer {
     margin-top: auto;
     text-align: right;
+
+    @include brakepoint($mobile-bp) {
+        text-align: left;
+    }
 }

@@ -1,5 +1,5 @@
 .post__title--mb0 {
-  margin-bottom: 0;
+  margin-bottom: 6px;
 }
 
 .post__actions {
@@ -90,10 +90,24 @@
 .related__list h4 {
   margin: 0;
 }
+@media (max-width: 575px) {
+  .related__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .related__list-item {
   margin-bottom: 2rem;
   width: 50%;
+}
+@media (max-width: 575px) {
+  .related__list-item {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
 }
 
 .related__list-title {

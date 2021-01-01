@@ -231,6 +231,10 @@ body {
     &:focus {
         outline: none;
     }
+
+    @include brakepoint($tablet-bp) {
+        font-size: 16px;
+    }
 }
 
 /*-----------------burger------------------*/
@@ -327,7 +331,7 @@ body {
         flex-direction: column;
         height: calc(100vh - 46px);
         padding-bottom: 20px;
-        top: 46px;
+        top: 50px;
         overflow: auto;
         transform: translateX(-100%);
         transition: transform .3s linear;
@@ -496,6 +500,8 @@ body {
 
     @include brakepoint($tablet-bp) {
         padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -518,6 +524,11 @@ body {
     grid-column-gap: 13px;
     grid-template-rows: 195px;
     margin-bottom: 3rem;
+
+    @include brakepoint($mobile-bp) {
+        grid-template-columns: 140px 140px 140px 140px;
+        overflow: auto;
+    }
 }
 
 
@@ -592,6 +603,10 @@ body {
     border-radius: 5px;
     padding: 15px 20px;
     background-color: $primary;
+
+    @include brakepoint($mobile-bp) {
+        padding: 15px;
+    }
 }
 
 .add-post__form {
@@ -620,18 +635,24 @@ body {
     }
 }
 
-    .add-post__file {
-        display: block;
-        height: 44px;
-        width: 44px;
-        border-radius: 50%;
-        background: #ededed url("/img/add-photo.svg") center no-repeat;
-        cursor: pointer;
+.add-post__file {
+    display: block;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background: #ededed url("/img/add-photo.svg") center no-repeat;
+    cursor: pointer;
 
-        input {
-            display: none;
-        }
+    input {
+        display: none;
     }
+
+    @include brakepoint($mobile-bp) {
+        height: 35px;
+        width: 35px;
+        background-size: 18px 18px;
+    }
+}
 
 .add-post__send {
     display: block;
@@ -639,12 +660,20 @@ body {
     width: 44px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: $blue;
+    background: $blue url("/img/send.svg") center no-repeat;
     border: none;
     transition: background-color .3s linear;
+    color: transparent;
+    font-size: 0;
     
     &:hover {
         background: darken($blue, 10%);
+    }
+
+    @include brakepoint($mobile-bp) {
+        height: 35px;
+        width: 35px;
+        background-size: 15px 15px;
     }
 }
 
@@ -653,6 +682,10 @@ body {
     justify-content: space-between;
     width: 110px;
     flex-shrink: 0;
+
+    @include brakepoint($mobile-bp) {
+        width: 83px;
+    }
 }
 
 /*---------------------------post------------------------------*/
@@ -664,6 +697,11 @@ body {
     border-radius: 5px;
     box-shadow: 0 15px 25px rgba(black, .4);
     overflow: hidden;
+
+    @include brakepoint($mobile-bp) {
+        padding: 15px 15px;
+        margin-bottom: 2rem;
+    }
 }
 
 .post__header {
@@ -683,12 +721,17 @@ body {
 
 .post__content {
     margin-bottom: 1.8rem;
+
+    @include brakepoint($mobile-bp) {
+        margin-bottom: 0.8rem;
+    }
 }
 
 .post__title {
     font-size: 18px;
     color: $white;
     font-weight: 500;
+    line-height: 1.4;
 
     a {
         color: inherit;
@@ -710,6 +753,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include brakepoint($mobile-bp) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .post__data {
@@ -726,6 +774,11 @@ body {
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    @include brakepoint($mobile-bp) {
+        margin-bottom: 10px;
+        font-size: 12px;
     }
 } 
 
@@ -759,6 +812,10 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 5rem;
+
+    @include brakepoint($mobile-bp) {
+        margin-top: 4rem;
+    }
 }
 
 .pagination__item {

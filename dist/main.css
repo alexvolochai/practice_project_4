@@ -202,6 +202,11 @@ body ul {
 .search__input:focus {
   outline: none;
 }
+@media (max-width: 991px) {
+  .search__input {
+    font-size: 16px;
+  }
+}
 
 /*-----------------burger------------------*/
 .burger {
@@ -280,7 +285,7 @@ body ul {
     flex-direction: column;
     height: calc(100vh - 46px);
     padding-bottom: 20px;
-    top: 46px;
+    top: 50px;
     overflow: auto;
     transform: translateX(-100%);
     transition: transform .3s linear;
@@ -452,6 +457,8 @@ body ul {
 @media (max-width: 991px) {
   .main {
     padding-left: 0;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -461,7 +468,7 @@ body ul {
   padding-left: 50px;
   padding-right: 50px;
 }
-@media (max-width: 700px) {
+@media (max-width: 575px) {
   .container {
     padding: 0 1.5rem;
   }
@@ -474,6 +481,12 @@ body ul {
   grid-column-gap: 13px;
   grid-template-rows: 195px;
   margin-bottom: 3rem;
+}
+@media (max-width: 575px) {
+  .stories {
+    grid-template-columns: 140px 140px 140px 140px;
+    overflow: auto;
+  }
 }
 
 .stories__item {
@@ -540,6 +553,11 @@ body ul {
   padding: 15px 20px;
   background-color: #202020;
 }
+@media (max-width: 575px) {
+  .add-post {
+    padding: 15px;
+  }
+}
 
 .add-post__form {
   display: flex;
@@ -582,6 +600,13 @@ body ul {
 .add-post__file input {
   display: none;
 }
+@media (max-width: 575px) {
+  .add-post__file {
+    height: 35px;
+    width: 35px;
+    background-size: 18px 18px;
+  }
+}
 
 .add-post__send {
   display: block;
@@ -589,12 +614,21 @@ body ul {
   width: 44px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #3137c9;
+  background: #3137c9 url("/img/send.svg") center no-repeat;
   border: none;
   transition: background-color .3s linear;
+  color: transparent;
+  font-size: 0;
 }
 .add-post__send:hover {
   background: #272ca0;
+}
+@media (max-width: 575px) {
+  .add-post__send {
+    height: 35px;
+    width: 35px;
+    background-size: 15px 15px;
+  }
 }
 
 .add-post__form-actions {
@@ -602,6 +636,11 @@ body ul {
   justify-content: space-between;
   width: 110px;
   flex-shrink: 0;
+}
+@media (max-width: 575px) {
+  .add-post__form-actions {
+    width: 83px;
+  }
 }
 
 /*---------------------------post------------------------------*/
@@ -612,6 +651,12 @@ body ul {
   border-radius: 5px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+}
+@media (max-width: 575px) {
+  .post {
+    padding: 15px 15px;
+    margin-bottom: 2rem;
+  }
 }
 
 .post__header {
@@ -631,11 +676,17 @@ body ul {
 .post__content {
   margin-bottom: 1.8rem;
 }
+@media (max-width: 575px) {
+  .post__content {
+    margin-bottom: 0.8rem;
+  }
+}
 
 .post__title {
   font-size: 18px;
   color: #fff;
   font-weight: 500;
+  line-height: 1.4;
 }
 .post__title a {
   color: inherit;
@@ -656,6 +707,12 @@ body ul {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 575px) {
+  .post__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .post__data {
   display: flex;
@@ -670,6 +727,12 @@ body ul {
 }
 .post__data a:hover {
   text-decoration: underline;
+}
+@media (max-width: 575px) {
+  .post__data {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
 }
 
 .post__data-item:not(:last-child):after {
@@ -697,6 +760,11 @@ body ul {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+}
+@media (max-width: 575px) {
+  .pagination {
+    margin-top: 4rem;
+  }
 }
 
 .pagination__item {
